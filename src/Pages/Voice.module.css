@@ -1,0 +1,19 @@
+.container {
+    margin: auto;
+    margin-top: 25vh;
+    width: 400px;
+}
+
+.container input {
+    width: 100%;
+}
+
+.container button {
+    display: block;
+    margin: 5vh auto;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}

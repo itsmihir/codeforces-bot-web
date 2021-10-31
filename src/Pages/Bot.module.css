@@ -1,0 +1,12 @@
+.container {
+    margin: auto;
+    width: 500px;
+    margin-top: 20vh;
+    caret-color: rgba(0, 0, 0, 0);
+    text-align: center;
+}
+
+.container img {
+    width: 100%;
+    margin-bottom: 10vh;
+}

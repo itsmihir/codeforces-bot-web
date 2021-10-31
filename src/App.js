@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route, Redirect } from "react-router-dom";
+import { useContext } from "react";
+import AuthContext from "./Store/Auth";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Voice from "./Pages/Voice";
+import Command from "./Pages/Command";
+import Bot from "./Pages/Bot";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const userName = useContext(AuthContext).userName;
+    return (
+        <Switch>
+            <Route path="/login">
+                {userName && <Redirect to="/" />}
+                <Login />
+            </Route>
+
+            {!userName && <Redirect to="/login" />}
+
+            <Route path="/" exact>
+                <Home />
+            </Route>
+
+            <Route path="/voice">
+                <Voice />
+            </Route>
+
+            <Route path="/command">
+                <Command />
+            </Route>
+
+            <Route path="/bot">
+                <Bot />
+            </Route>
+        </Switch>
+    );
 }
 
 export default App;

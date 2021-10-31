@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20vh;
+}
+
+.container button {
+    margin: 4vh;
+}
+
+.container button:first-child {
+    font-weight: bold;
+}

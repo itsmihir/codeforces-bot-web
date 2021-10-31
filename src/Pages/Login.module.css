@@ -1,0 +1,39 @@
+.container {
+    margin: auto;
+    width: 20%;
+    height: 100vh;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    caret-color: rgba(0, 0, 0, 0);
+}
+
+.container img {
+    width: 100%;
+    max-height: 50%;
+}
+
+.container form {
+    margin-top: 2rem;
+}
+
+.container input {
+    margin-top: 2rem;
+    height: 30px;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    caret-color: rgba(0, 0, 0, 1);
+}
+
+.container button {
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 60%;
+    }
+    .container form {
+        margin-top: 0rem;
+    }
+}
